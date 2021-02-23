@@ -1,0 +1,70 @@
+{
+	"name": "crud-generator-vscode-plugin",
+	"displayName": "Crud Generator Plugin",
+	"description": "Crud组件的可视化设计及代码生成器",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"author": {
+		"name": "ckangwen"
+	},
+	"activationEvents": [
+		"onCommand:extension.openCrudGenerator"
+	],
+	"icon": "images/logo.png",
+	"main": "./extension.js",
+	"publisher": "jakHuang",
+	"homepage": "https://github.com/ckangwen/crud-generator-vscode-plugin/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ckangwen/crud-generator-vscode-plugin"
+	},
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "设计器配置",
+			"properties": {
+				"openCrudGenerator.src": {
+					"type": "string",
+					"default": "http://ckw1999.gitee.io/crud-generator/",
+					"description": "设计器远程链接"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.openCrudGenerator",
+				"title": "打开Crud设计器"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.openCrudGenerator",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.0.0",
+		"eslint": "^6.6.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"open": "^7.0.0"
+	}
+}
