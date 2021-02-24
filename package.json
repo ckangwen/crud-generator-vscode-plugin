@@ -2,13 +2,10 @@
 	"name": "crud-generator-vscode-plugin",
 	"displayName": "Crud Generator Plugin",
 	"description": "Crud组件的可视化设计及代码生成器",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"engines": {
 		"vscode": "^1.0.0"
 	},
-	"categories": [
-		"Other"
-	],
 	"author": {
 		"name": "ckangwen"
 	},
@@ -17,7 +14,7 @@
 	],
 	"icon": "images/logo.png",
 	"main": "./extension.js",
-	"publisher": "jakHuang",
+	"publisher": "ckangwen",
 	"homepage": "https://github.com/ckangwen/crud-generator-vscode-plugin/blob/master/README.md",
 	"repository": {
 		"type": "git",
@@ -50,17 +47,10 @@
 			]
 		}
 	},
-	"scripts": {
-		"test": "node ./test/runTest.js"
-	},
 	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.11.7",
 		"@types/vscode": "^1.0.0",
 		"eslint": "^6.6.0",
-		"glob": "^7.1.5",
-		"mocha": "^6.2.2",
 		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
 	},
